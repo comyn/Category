@@ -12,7 +12,7 @@
 
 
 /**
- unicode编码字符
+ 控制台打印：unicode转汉字
  Xcode8以后，字典和数组的descriptionWithLocale都不再被调用。后来使用
  - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level来取代
  
