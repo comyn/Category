@@ -34,4 +34,22 @@
  @return 返回路径
  */
 - (instancetype)appendDocument;
+
+
+/**
+ base64编码
+
+ @return base64字符串
+ */
+- (instancetype)base64Encode;
+
+
+/**
+ base64解码
+
+ @return 解码后的字符串
+ */
+- (instancetype)base64Decode;
+
+- (instancetype)md5String;
 @end
