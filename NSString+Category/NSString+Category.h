@@ -36,20 +36,24 @@
 - (instancetype)appendDocument;
 
 
-/**
- base64编码
-
- @return base64字符串
- */
+//编码
 - (instancetype)base64Encode;
-
-
-/**
- base64解码
-
- @return 解码后的字符串
- */
+//解码
 - (instancetype)base64Decode;
-
+//不可逆加密，用于校验
 - (instancetype)md5String;
+- (instancetype)sha1String;
+- (instancetype)sha256String;
+// NSData 转 hexString
+- (instancetype)hexStrWithData:(NSData *)data;
+- (instancetype)hexStringWithData:(NSData *)data;
+@end
+
+@interface NSString (RSAEncrypt)
+- (instancetype)RSAEncryptWithPublicKeyFile:(NSString *)path;
+- (instancetype)RSADecryptWithPrivateKeyFile:(NSString *)path password:(NSString *)password;
+
+- (instancetype)RSAEncryptWithPublicKey:(NSString *)publicKey;
+- (instancetype)RSADecryptWithPrivateKey:(NSString *)privateKey;
+
 @end
